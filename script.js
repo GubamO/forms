@@ -18,3 +18,26 @@ displayAge.addEventListener('keyup', (e) => {
         display.style.visibility = 'hidden';
     }
 });
+
+let pwd = document.getElementById('pwd');
+let pwdConf = document.getElementById('pwd-confirm');
+pwd.addEventListener('keyup', () => {
+    if(pwd.value.length >= 6)
+    {
+        pwd.style.backgroundColor = 'white';
+    }
+    else
+    {
+        pwd.style.backgroundColor = 'red';
+    }
+});
+pwdConf.addEventListener('keyup', () => {
+    if(pwdConf.value !== pwd.value)
+    {
+        pwdConf.style.backgroundColor = 'red';
+    }
+    else
+    {
+        pwdConf.style.backgroundColor = 'white';
+    }
+});
